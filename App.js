@@ -4,6 +4,23 @@ import { BarCodeScanner } from 'expo-barcode-scanner';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCr5LAGU37xcRb9vQWtssUmngNJvFDQ5SA",
+  authDomain: "caloriecounter-b0801.firebaseapp.com",
+  projectId: "caloriecounter-b0801",
+  storageBucket: "caloriecounter-b0801.appspot.com",
+  messagingSenderId: "573225939012",
+  appId: "1:573225939012:web:aada8da8e57e4be5a14c11"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 const Stack = createNativeStackNavigator();
 
 function getNutrientData(food, servings){
